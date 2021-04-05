@@ -486,6 +486,8 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
 .reviews-button:hover {
     background-color: white;
+    box-shadow: 0 0 5px #5A98D0, 
+                inset 0 0 2px #5A98D0;
 }
 
 .reviews-button:hover path,
