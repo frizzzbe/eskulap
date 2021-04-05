@@ -15,7 +15,7 @@ body {
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: normal;
     color: #533738;
-    background-color: #e5e5e5;
+    background-color: #F8FCFF;
 }
 
 img {
@@ -29,11 +29,11 @@ a {
 }
 
 a:hover {
-    color: #cc8b86;
+    color: #5A98D0;
 }
 
 a:focus {
-    color: #99544f;
+    color: #5A98D0;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -67,19 +67,20 @@ a:focus {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    border: 2px solid #cc8b86;
-    background-color: #cc8b86;
+    color: #FFF;
+    border: 2px solid #5A98D0;
+    background-color: #5A98D0;
 }
 
 .button:hover {
-    color: #cc8b86;
-    border-color: white;
-    background-color: white;
+    color: #FFF;
+    border-color: #3a7fbc; 
+    background-color: #3a7fbc;
 }
 
 .button:focus {
-    color: #99544f;
-    border: 2px solid #99544f;
+    color: #3a7fbc;
+    border: 2px solid #3a7fbc;
     background-color: white;
 }
 
@@ -139,6 +140,22 @@ a:focus {
 .nav-link {
     font-size: 16px;
     line-height: 20px;
+}
+
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #5A98D0;
+    pointer-events: none;
+    transition: all .3s;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    right: 0;
 }
 
 .phone {
@@ -205,7 +222,7 @@ a:focus {
     padding-top: 85px;
     padding-bottom: 80px;
     color: white;
-    background-color: #8d7370;
+    background-color: #5A98D0;
 }
 
 .advantages-list {
@@ -256,6 +273,7 @@ a:focus {
 }
 
 .works-item {
+    overflow: hidden;
     position: relative;
 }
 
@@ -281,8 +299,7 @@ a:focus {
 .works-hover {
     position: absolute;
     top: 0;
-    left: 0;
-    z-index: -1;
+    left: 100%;
     box-sizing: border-box;
     padding-top: 86px;
     padding-right: 35px;
@@ -290,11 +307,13 @@ a:focus {
     width: 100%;
     height: 100%;
     color: white;
-    background-color: rgba(100, 72, 69, 0.8);
+    background-color: rgba(90, 152, 208, 0.8);
+    transition: left 0.5s;
+    z-index: 2;
 }
 
 .works-item:hover .works-hover {
-    z-index: 2;
+    left: 0;
 }
 
 .works-heading {
@@ -329,12 +348,9 @@ a:focus {
     margin-left: 10px;
 }
 
-.more:hover path {
-    fill: #cc8b86;
-}
-
+.more:hover path ,
 .more:focus path {
-    fill: #99544f;
+    fill: #5A98D0;
 }
 
 /* Стили для команды */
@@ -342,7 +358,6 @@ a:focus {
 .team {
     padding-top: 50px;
     padding-bottom: 60px;
-    background-color: #e2c4ba;
 }
 
 .team-list {
@@ -395,7 +410,7 @@ a:focus {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: #8d7370;
+    background-color: #5A98D0;
     color: white;
     font-weight: 500;
     font-size: 30px;
@@ -423,7 +438,7 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     line-height: 30px;
     color: white;
 
-    background-color: #8D7370;
+    background-color: #5A98D0;
     border-radius: 50%;
 }
 */
@@ -463,10 +478,10 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     padding: 0;
     width: 68px;
     height: 68px;
-    border: 2px solid #cc8b86;
+    border: 2px solid #5A98D0;
     border: none;
     border-radius: 50%;
-    background-color: #cc8b86;
+    background-color: #5A98D0;
 }
 
 .reviews-button:hover {
@@ -475,11 +490,11 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
 .reviews-button:hover path,
 .reviews-button:focus path {
-    fill: #cc8b86;
+    fill: #5A98D0;
 }
 
 .reviews-button:focus {
-    border: 2px solid #cc8b86;
+    border: 2px solid #5A98D0;
     background-color: white;
 }
 
@@ -533,7 +548,7 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 /* Стили для формы */
 
 .form {
-    background-color: #8d7370;
+    background-color: #5A98D0;
     color: white;
 }
 
@@ -590,6 +605,8 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
 .submit-button {
     margin-top: 7px;
+    background-color: #3D70B0;
+    color: #fff;
 }
 
 .map {
@@ -599,6 +616,10 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 }
 
 /* Стили для подвала */
+.page-footer {
+    background-color: #3D70B0;
+    color: #fff;
+}
 
 .page-footer .wide-container {
     display: flex;
@@ -608,6 +629,7 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 }
 
 .page-footer .phone {
+    color: #fff;
     font-size: 18px;
     line-height: 30px;
 }
