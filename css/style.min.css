@@ -102,14 +102,15 @@ a:focus {
 
 .page-header .wide-container {
     display: flex;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 36px;
     padding-bottom: 46px;
 }
 
 .logo {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     align-self: normal;
     margin-right: 83px;
     font-size: 16px;
@@ -175,7 +176,8 @@ a:focus {
 }
 
 .promo-text {
-    width: 46%;
+    width: 500px;
+    max-width: 100%;
 }
 
 .main-heading {
@@ -200,15 +202,18 @@ a:focus {
 
 .half-wrap {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 64px;
 }
 
 .about-img {
     align-self: flex-start;
-    margin-right: 64px;
 }
 
 .text-wrap {
-    width: 50%;
+    flex-basis: 50%;
+    flex-grow: 0.6;
 }
 
 .text-wrap p {
@@ -227,7 +232,8 @@ a:focus {
 
 .advantages-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 30px;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
@@ -360,24 +366,31 @@ a:focus {
     padding-bottom: 60px;
 }
 
+.team .wide-container {
+    margin-top: 60px;
+}
+
 .team-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0;
     margin-bottom: 18px;
     padding: 0;
     list-style: none;
+    gap: 20px;
 }
 
 .team-item {
     margin-bottom: 20px;
     width: 31%;
+    min-width: 240px;
 }
 
 .team-img {
     display: block;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .team-text {
@@ -391,6 +404,7 @@ a:focus {
     margin-top: 40px;
     padding: 0;
     list-style: none;
+    gap: 20px;
     /*    counter-reset: section;*/
 }
 
@@ -398,7 +412,8 @@ a:focus {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    width: 25%;
+    flex-basis: 25%;
+    flex: 1;
 }
 
 .process-item span {
@@ -594,7 +609,7 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
 .text-input:focus + .input-label,
 .text-input:valid:not(:placeholder-shown) + .input-label {
-    bottom: 40px;
+    bottom: 34px;
     transition: 0.2s ease-in;
 }
 
@@ -625,6 +640,7 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
 .page-footer .wide-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding-top: 37px;
     padding-bottom: 37px;
@@ -637,6 +653,7 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 }
 
 .adress {
+    text-align: center;
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
@@ -645,4 +662,56 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
 .copyright {
     margin: 0;
+}
+
+
+@media (max-width: 1199px) {
+    .process-list {
+        justify-content: space-evenly;
+    }
+
+    .process-item {
+        max-width: 100%;
+        width: 350px;
+        flex: none;
+    }
+
+    .form .wide-container {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    .reviews-slide {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .reviews-images img {
+        display: block;
+        max-width: 100%;
+        min-width: 250px;
+        width: 41%;
+        flex-grow: 1;
+        margin-bottom: 0; 
+    }
+}
+
+@media (max-width: 767px) {
+    .team-list {
+        gap: 30px;
+    }
+
+    .team-item {
+        width: 70%;
+        min-width: 240px;
+    }
 }
