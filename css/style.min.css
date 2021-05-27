@@ -458,6 +458,12 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 }
 */
 
+.process-img {
+    max-width: 100%;
+    margin-bottom: 57px;
+    height: 157px;
+}
+
 .process-item p {
     margin: 0;
     text-align: center;
@@ -646,6 +652,18 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     padding-bottom: 37px;
 }
 
+.footer-contact {
+    margin-left: 42px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footer-contact:first-child {
+    margin-bottom: 30px;
+}
+
 .page-footer .phone {
     color: #fff;
     font-size: 18px;
@@ -653,15 +671,17 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 }
 
 .adress {
-    text-align: center;
+    text-align: left;
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
-    margin-left: 42px;
 }
 
 .copyright {
+    width: 100%;
+    text-align: center;
     margin: 0;
+    margin-top: 25px;
 }
 
 
@@ -706,6 +726,29 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 }
 
 @media (max-width: 767px) {
+    body {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .container {
+        width: 85%;
+    }
+
+    .main-heading {    
+        font-size: 32px;
+        line-height: 50px;
+    }
+
+    .button {
+        padding: 24px 35px;
+        font-size: 18px;
+    }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
     .team-list {
         gap: 30px;
     }
@@ -713,5 +756,50 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     .team-item {
         width: 70%;
         min-width: 240px;
+    }
+    
+    .reviews-pagination,
+    .works-hover {
+        display: none;
+    }
+
+    .process-img {
+        margin-bottom: 20px;
+    }
+
+    .process-item span {
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+
+    .reviews-slider {
+        padding: 0;
+    }
+
+    .advantages-item p {
+        font-size: 24px;
+    }
+
+    .advantages-item span {
+        font-size: 40px;
+    }
+
+    .footer-contact {
+        margin-left: 0;
+        justify-content: space-between;
+    }
+
+    .form-wrap {
+        padding-left: 0;
+    }
+
+    .adress {
+        font-size: 16px;
+        flex-basis: 100%;
+    }
+
+    .page-footer .phone {
+        font-size: 16px;
     }
 }
