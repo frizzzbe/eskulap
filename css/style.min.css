@@ -976,3 +976,9 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
         font-size: 16px;
     }
 }
+
+@media (max-width: 400px) { 
+    .page-header .phone {
+        display: none;
+    }
+}
