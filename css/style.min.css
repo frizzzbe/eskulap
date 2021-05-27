@@ -164,6 +164,175 @@ a:focus {
     line-height: 20px;
 }
 
+
+.mob-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: #FFF;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .375s;
+}
+
+.mob-nav.is-open {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+}
+
+.mob-nav::before {
+	 content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px;
+    background: #3D70B0;
+    transform-origin: 0 0;
+    transform: skew(-14deg) translateX(-120%);
+    transition: all .275s .1s;
+}
+
+.mob-nav.is-open::before {
+    transform: skew(-14deg) translateX(0);
+}
+
+/* Skewing effect on menu links */
+.mob-nav ul {
+    display: inline-flex;
+    flex-direction: column;
+    height: 100%; /* Should be 100%, but we have a notice message :D */
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
+}
+
+.mob-nav li {
+    display: block;
+    margin: .5rem 0;
+    text-align: right;
+    transform: skew(16deg);
+}
+
+/* Apparition effect on links */
+.mob-nav a {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.mob-nav.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+}
+.mob-nav li:nth-child(1) a {
+	transition: all 275ms 175ms
+}
+.mob-nav li:nth-child(2) a {
+	transition: all 275ms 225ms
+}
+.mob-nav li:nth-child(3) a {
+	transition: all 275ms 275ms
+}
+.mob-nav li:nth-child(4) a {
+	transition: all 275ms 325ms
+}
+.mob-nav li:nth-child(5) a {
+	transition: all 275ms 375ms
+}
+
+
+/* Decoration */
+.mob-nav ul,
+.mob-nav li {
+	list-style: none;
+	padding: 0;
+}
+.mob-nav a {
+	display: block;
+	padding: 12px 0;
+	color: #FFFFFF;
+	font-size: 1.4em;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.open-mob-nav {
+	position: relative;
+	display: none;
+	z-index: 1000;
+	background: none;
+	border: 0;
+	cursor: pointer;
+    align-self: flex-end;
+}
+.open-mob-nav:focus {
+	outline: none;
+}
+
+.burger {
+	position: relative;
+	display: block;
+	width: 28px;
+	height: 4px;
+	margin: 0 auto;
+	background: #533738;
+	transform: skew(5deg);
+	transition: all .275s;
+}
+
+.burger:after,
+.burger:before {
+	content: '';
+	display: block;
+	height: 100%;
+	background: #533738;
+	transition: all .275s;
+}
+
+.burger:after {
+	transform: translateY(-12px) translateX(-2px) skew(-20deg);
+}
+
+.burger:before {
+	transform: translateY(-16px) skew(-10deg);
+}
+
+/* Toggle State part */
+.is-open .burger {
+	background: #FFFFFF;
+	transform: skew(5deg) translateY(-8px) rotate(-45deg);
+}
+
+.is-open .burger:before {
+	background: #FFFFFF;
+	transform: translateY(0px) skew(-10deg) rotate(75deg);
+}
+
+.is-open .burger:after {
+	background: #FFFFFF;
+	transform: translateY(-12px) translateX(10px) skew(-20deg);
+    opacity: 0;
+}
+
+/* MENU Text part */
+
+.mob-menu-container {
+	position: absolute;
+	top: 0; right: 0;
+	bottom: 0; left: 0;
+	overflow: hidden;
+	background: linear-gradient(to bottom, #eee, #ddd);
+}
+
+
+
+
+
 /* Стили для промо блока */
 
 .promo {
@@ -700,6 +869,14 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 }
 
 @media (max-width: 991px) {
+    .main-nav {
+        display: none;
+    }
+
+    .open-mob-nav {
+        display: block;
+    }
+
     .reviews-slide {
         grid-template-columns: 1fr;
     }

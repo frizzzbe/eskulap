@@ -14,14 +14,13 @@
 </head>
 
 <body>
-
     <header class="page-header">
         <div class="wide-container">
             <a class="logo">
                 <img src="img/logo.png" alt="Логотип компании ESKULAP" width="25" height="25">
                 ESKULAP
             </a>
-            <nav>
+            <nav class="main-nav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
                     <li class="nav-item"><a href="#works" class="nav-link">Портфолио</a></li>
@@ -31,8 +30,33 @@
                 </ul>
             </nav>
             <a href="tel:+79054994438" class="phone">+7 (905) 499-44-38</a>
+			<button id="burger" class="open-mob-nav">
+				<span class="burger"></span>
+			</button>
         </div>
     </header>
+
+	<div class="">
+		<div class="mob-nav" id="mob-nav">
+			<ul>
+				<li>
+					<a class="mob-nav-link" href="#about">О нас</a>
+				</li>
+				<li>
+					<a class="mob-nav-link" href="#works">Портфолио</a>
+				</li>
+				<li>
+					<a class="mob-nav-link" href="#team">Команда</a>
+				</li>
+				<li>
+					<a class="mob-nav-link" href="#process-list">Как мы работаем</a>
+				</li>
+				<li>
+					<a class="mob-nav-link" href="#form">Оставить заявку</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 
     <main>
         <section class="promo">
@@ -283,5 +307,29 @@
             prevEl: '.reviews-button-prev',
         }
     });
+
+	const burger = document.querySelector('#burger'),
+		nav = document.querySelector('#mob-nav'),
+		navLinks = document.querySelectorAll('.mob-nav-link'),
+		body = document.querySelector('body');
+		
+	burger.addEventListener('click', () => {
+		burger.classList.toggle('is-open');
+		nav.classList.toggle('is-open');
+
+		if (burger.classList.contains('is-open')) {
+			body.style.overflow = 'hidden';
+		} else {
+			body.style.overflow = '';
+		}
+	});
+
+	for (let navLink of navLinks) {
+		navLink.addEventListener('click', (e) => {
+			burger.classList.toggle('is-open');
+			nav.classList.toggle('is-open');
+			body.style.overflow = '';
+		});
+	}
 </script>
 </html>
