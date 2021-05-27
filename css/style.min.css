@@ -112,7 +112,7 @@ a:focus {
     display: flex;
     align-items: center;
     align-self: normal;
-    margin-right: 83px;
+    margin-right: 20px;
     font-size: 16px;
     line-height: 20px;
 }
@@ -125,7 +125,7 @@ a:focus {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    margin-right: 42px;
+    margin-right: 20px;
     padding: 0;
     list-style: none;
 }
@@ -531,14 +531,6 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     grid-column-gap: 20px;
 }
 
-.reviews-slide {
-    display: none;
-}
-
-.reviews-slide:first-child {
-    display: grid;
-}
-
 .reviews-text {
     display: flex;
     flex-direction: column;
@@ -557,6 +549,10 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 .reviews-author {
     margin-bottom: 0;
     text-transform: uppercase;
+}
+
+.reviews-images {
+    padding: 0 5px;
 }
 
 .reviews-images img {

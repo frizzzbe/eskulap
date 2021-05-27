@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css" type="text/css">
     <link rel="stylesheet" href="./css/style.min.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -177,33 +178,55 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="reviews-slides">
-                        <article class="reviews-slide">
-                            <div class="reviews-text">
-                                <p>«Восторг! Спасибо, за качественное обслуживание. Очень рада, что выбрала вашу клинику для решения своих проблем.</p>
-                                <p>Работа шла быстро, было очень приятно общаться и взаимодествовайть
-                                с сотрудниками. Не ожидала, что это будет так легко!</p>
-                                <p>Буду советовать и своим друзьям к вам обращаться!»</p>
-                                <p class="reviews-author">АННА БЕЛОВСКАЯ</p>
-                            </div>
-                            <div class="reviews-images">
-                                <img src="img/review-1.jpg" alt="Светлый интерьер гостинной с деревянной мебелью и черным диваном">
-                                <img src="img/review-2.jpg" alt="Интерьер кухни с деревянными фасадами, на переднем плане белая барная стойка с пятью коричневыми высокими стульями">
-                            </div>
-                        </article>
-                        <article class="reviews-slide">
-                            <div class="reviews-text">
-                                <p>Восторг! Спасибо, за качественное обслуживание. Очень рада, что выбрала вашу клинику для решения своих проблем.</p>
-                                <p>Работа шла быстро, было очень приятно общаться и взаимодествовайть
-                                с сотрудниками. Не ожидала, что это будет так легко!»</p>
-                                <p>Я безумно рада, что выбрала такого дизайнера. Мне повезло!</p>
-                                <p class="reviews-author">АННА БЕЛОВСКАЯ</p>
-                            </div>
-                            <div class="reviews-images">
-                                <img src="img/review-1.jpg" alt="Светлый интерьер гостинной с деревянной мебелью и черным диваном">
-                                <img src="img/review-2.jpg" alt="Интерьер кухни с деревянными фасадами, на переднем плане белая барная стойка с пятью коричневыми высокими стульями">
-                            </div>
-                        </article>
+                    <div class="swiper-container reviews-slides">
+                        <div class="swiper-wrapper">
+                            <article class="swiper-slide reviews-slide">
+                                <div class="reviews-text">
+                                    <p>«Восторг! Спасибо, за качественное обслуживание. Очень рада, что выбрала вашу клинику для решения своих проблем.</p>
+                                    <p>Работа шла быстро, было очень приятно общаться и взаимодествовайть
+                                    с сотрудниками. Не ожидала, что это будет так легко!</p>
+                                    <p>Буду советовать и своим друзьям к вам обращаться!»</p>
+                                    <p class="reviews-author">АННА БЕЛОВСКАЯ</p>
+                                </div>
+                                <div class="reviews-images">
+                                    <img src="img/review-1.jpg" alt="Фото из отзыва">
+                                    <img src="img/review-2.jpg" alt="Фото из отзыва">
+                                </div>
+                            </article>
+                            <article class="swiper-slide reviews-slide">
+                                <div class="reviews-text">
+                                    <p>Невероятно, как хорошо справились специалисты клиники с моей проблемой. Качественная работа была проделана.</p>
+                                    <p>Специалисты быстро выявили проблемы и назначили лечение, которое в свою очередь проходило быстро и безболезненно, благодаря качественному подходу.</p>
+                                    <p>Я действительно рад, что обратился сюда.</p>
+                                    <p class="reviews-author">ИГОРЬ КАЛУЖНЫЙ</p>
+                                </div>
+                                <div class="reviews-images">
+                                    <img src="img/portfolio-1.jpg" alt="Фото из отзыва">
+                                </div>
+                            </article>
+                            <article class="swiper-slide reviews-slide">
+                                <div class="reviews-images">
+                                    <img src="img/portfolio-3.jpg" alt="Фото из отзыва">
+                                </div>
+                                <div class="reviews-text">
+                                    <p>Очень качественные услуги, позволили быстро решить мои проблемы, я даже не думал, что всё так просто решается.</p>
+                                    <p>Очень благодарен специалистам, которые уделили мне время. Очень доволен оказанными услугами.</p>
+                                    <p class="reviews-author">ДМИТРИЙ ЩЕРБИН</p>
+                                </div>
+                            </article>
+                            <article class="swiper-slide reviews-slide">
+                                <div class="reviews-text">
+                                    <p>Хорошие сервисы, действительно понравилось общение с персоналом и подход к делу, чувствуется профессионализм работников и опыт работы.</p>
+                                    <p>Действительно удобно проходить лечение, когда клиника предоставляет отель, для максимального удобства. Со всеми остальными задачами, так же справились быстро и без затруднений.</p>
+                                    <p>В следющий раз обязательно обращусь сюда.</p>
+                                    <p class="reviews-author">КСЕНИЯ ШИНЯЕВА</p>
+                                </div>
+                                <div class="reviews-images">
+                                    <img src="img/portfolio-2.jpg" alt="Фото из отзыва">
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -234,16 +257,31 @@
     <footer class="page-footer">
         <div class="wide-container">
             <div class="footer-contact">
-                <p class="adress">Медицинский центр: г. Пятигорск, ул. Малыгина, 12</p>
+                <p class="adress">Медицинский центр: ул. Бунимовича, 78</p>  
                 <a href="tel:+79054994438" class="phone">+7 (905) 499-44-38</a>
             </div>
             <div class="footer-contact">
                 <p class="adress">Стоматология: ул. Малыгина, 34А</p>
                 <a href="tel:+78793390050" class="phone">+7 (8793) 39-00-50</a>
             </div>
-            <p class="copyright">© 2023 Семейная клиника.  ООО “ЭСКУЛАП”</p>
+            <p class="copyright">© 2023 г. Пятигорск, семейная клиника.  ООО “ЭСКУЛАП”</p>
         </div>
     </footer>
 </body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
 
+        // Navigation arrows
+        navigation: {
+            nextEl: '.reviews-button-next',
+            prevEl: '.reviews-button-prev',
+        }
+    });
+</script>
 </html>
