@@ -91,13 +91,13 @@
             <div class="container">
                 <ul class="advantages-list">
                     <li class="advantages-item">
-                        <p><span>10 </span>лет опыта</p>
+                        <p><span data-count="10">0</span>лет опыта</p>
                     </li>
                     <li class="advantages-item">
-                        <p><span>100</span>проектов</p>
+                        <p><span data-count="100">0</span>проектов</p>
                     </li>
                     <li class="advantages-item">
-                        <p><span>10</span>наград</p>
+                        <p><span data-count="10">0</span>наград</p>
                     </li>
                 </ul>
             </div>
@@ -229,13 +229,13 @@
                                 </div>
                             </article>
                             <article class="swiper-slide reviews-slide">
-                                <div class="reviews-images">
-                                    <img src="img/portfolio-3.jpg" alt="Фото из отзыва">
-                                </div>
                                 <div class="reviews-text">
                                     <p>Очень качественные услуги, позволили быстро решить мои проблемы, я даже не думал, что всё так просто решается.</p>
                                     <p>Очень благодарен специалистам, которые уделили мне время. Очень доволен оказанными услугами.</p>
                                     <p class="reviews-author">ДМИТРИЙ ЩЕРБИН</p>
+                                </div>
+                                <div class="reviews-images">
+                                    <img src="img/portfolio-3.jpg" alt="Фото из отзыва">
                                 </div>
                             </article>
                             <article class="swiper-slide reviews-slide">
@@ -331,5 +331,33 @@
 			body.style.overflow = '';
 		});
 	}
+
+
+    const counters = document.querySelectorAll('.advantages-item span');
+
+    let counterUp = (elem, time, fps = 15)=>{
+        if(elem.textContent == "0"){
+            let endNumber = +elem.dataset.count;
+            let increment = endNumber / (time / fps);
+            let currentNumber = 0;
+            let timedCount = setInterval(()=>{
+                if(currentNumber < endNumber){
+                    currentNumber += increment;
+                    if(currentNumber>endNumber)currentNumber = endNumber;
+                    elem.textContent = Math.round(currentNumber);
+                }else{clearInterval(timedCount);}
+            }, fps);
+        }
+    }
+    let startAnimation = () => {
+        counters.forEach((item)=>{
+            if(item.offsetTop + 200< window.pageYOffset + screen.height){
+                counterUp(item, 1100);
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', startAnimation);
+    document.addEventListener('scroll', startAnimation);
 </script>
 </html>
