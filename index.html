@@ -14,6 +14,10 @@
 </head>
 
 <body>
+    <div class="curtains">
+        <div class="curtain curtain-1"></div>
+        <div class="curtain curtain-2"></div>
+    </div>
     <header class="page-header">
         <div class="wide-container">
             <a class="logo">
@@ -359,5 +363,32 @@
 
     document.addEventListener('DOMContentLoaded', startAnimation);
     document.addEventListener('scroll', startAnimation);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+<script>
+    gsap.from(".header-info", {duration: 1.7, x: -300, ease: "bounce.out", opacity: 0, delay: 1.4});
+    gsap.to(".curtain-1", {
+        duration: 1.5,
+        y: -1400,
+        onComplete: ()=>document.querySelector('.curtains').style.display = "none"
+    });
+    gsap.to(".curtain-2", {
+        duration: 1.5,
+        y: 1400
+    });
+    // let cards = document.querySelectorAll('.card');
+    // cards.forEach((item, i)=>{
+    //     gsap.from(cards[i], {scrollTrigger: cards[i], duration: 1.5, opacity: 0});
+    // });
+    // let example = document.querySelectorAll('.examples div');
+    // example.forEach((item, i)=>{
+    //     gsap.from(example[i], {scrollTrigger: example[i], duration: 1, scale: .95});
+    // });
+
+    // gsap.from(".menus", {scrollTrigger: ".menus", duration: 1.5, scale: .85, opacity: 0, ease: "sine.out"});
+    // gsap.from(".woek .descriprion", {scrollTrigger: ".woek .descriprion", duration: 1, y: 50, opacity: 0, ease: "sine.out"});
+    // gsap.from(".woek .footer-button", {scrollTrigger: ".woek .footer-button", duration: 1, y: 50, opacity: 0, ease: "sine.out"});
 </script>
 </html>

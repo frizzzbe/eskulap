@@ -59,6 +59,24 @@ a:focus {
     width: 90%;
 }
 
+
+.curtains{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1001;
+    transform: rotate(16deg) scale(2);
+}
+
+.curtain{
+    position: relative;
+    margin: -1px;
+    height: 100%;
+    width: 100%;
+    background-color: #68a1d3;
+}
+
 .button {
     display: inline-block;
     vertical-align: middle;
