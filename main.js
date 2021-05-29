@@ -16,7 +16,7 @@ const swiper = new Swiper('.swiper-container', {
 const burger = document.querySelector('#burger'),
   nav = document.querySelector('#mob-nav'),
   navLinks = document.querySelectorAll('.mob-nav-link'),
-  body = document.querySelector('body');
+  body = document.querySelector('html');
   
 burger.addEventListener('click', () => {
   burger.classList.toggle('is-open');
