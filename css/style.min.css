@@ -61,7 +61,7 @@ a:focus {
 
 
 .curtains{
-    display: flex;
+    display: none;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -549,7 +549,8 @@ a:focus {
 
 /* Стили для команды */
 
-.team {
+.team,
+.process-list {
     padding-top: 50px;
     padding-bottom: 60px;
 }
@@ -660,7 +661,6 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 /* Стили для отзывов */
 
 .reviews {
-    padding-top: 65px;
     padding-bottom: 65px;
 }
 
