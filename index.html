@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css" type="text/css">
     <link rel="stylesheet" href="./css/style.min.css" type="text/css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text/css" />
 </head>
 
 <body>
@@ -166,6 +166,59 @@
                         <p>Пациент проходит все запланированные услуги</p>
                     </li>
                 </ol>
+            </div>
+        </section>
+        <section class="services" id="services">
+            <div class="wide-container">
+                <h2 class="section-heading">Услуги</h2>
+                <ul class="service-list">
+                    <li class="service-item">
+                        <h3 class="service-title">Неврология</h3>
+                        <p class="service-description">Патологии органов центральной и периферической нервной системы.<br>
+                            Диагностикой и лечением пациентов с неврологическими заболеваниями занимается врач узкой специализации – невролог.</p>
+                    </li>
+                    <li class="service-item">
+                        <h3 class="service-title">Рефлексотерапия</h3>
+                        <p class="service-description">Воздействие на биологически активные точки в теле. Врач ставит специальные иглы на определенную глубину, чтобы улучшить микроциркуляцию в тканях, нормализовать давление, минимизировать болевые ощущения.</p>
+                    </li>
+                    <li class="service-item">
+                        <h3 class="service-title">Мануальная терапия</h3>
+                        <p class="service-description">Вид альтернативной медицины, вариант манипулятивной медицины. <br>
+                            Используется преимущественно с целью лечения заболеваний опорно-двигательной системы.</p>
+                    </li>
+                    <li class="service-item">
+                        <h3 class="service-title">Массаж</h3>
+                        <p class="service-description">Одна из мануальных техник, совокупность приёмов механического и рефлекторного воздействия на ткани и органы, проводимых непосредственно на поверхности тела, с целью достижения лечебного эффекта.</p>
+                    </li>
+                    <li class="service-item">
+                        <h3 class="service-title">Физиотерапия</h3>
+                        <p class="service-description">Услуги, оказываемые физиотерапевтами пациентам с целью развития, поддержания и восстановления максимальной свободы движений тела и функциональных возможностей на протяжении жизни.</p>
+                    </li>
+                    <li class="service-item">
+                        <h3 class="service-title">Стоматология</h3>
+                        <p class="service-description">Имеющееся в клинике оборудование позволяет производить все необходимые операции.Мы настоятельно рекомендуем проводить своевременное лечение зубов, так как большинство проблем с зубами легче решаются на ранних этапах.</p>
+                    </li>
+                </ul>
+
+                <h2 class="section-heading">Стоматология</h2>
+                <ul class="service-list">
+                    <li class="service-item">
+                        <h3 class="service-title">Терапия</h3>
+                        <p class="service-description">Лечение зубов с помощью современных материалов и новейшего обезболивания. Чаще всего, в терапию обращаются пациенты за лечением кариеса, который появляется на эмали зуба и продвигается в глубокие отделы зуба.</p>
+                    </li>
+                    <li class="service-item">
+                        <h3 class="service-title">Ортопедия</h3>
+                        <p class="service-description">Профилактические меры и лечение приобретенных патологий, аномалий, деформаций и повреждений всех органов речеобразующего и жевательного аппарата.</p>
+                    </li>
+                    <li class="service-item">
+                        <h3 class="service-title">Хирургия</h3>
+                        <p class="service-description">Операции по удалению зубов, подсадка костной ткани, подготовка и имплантация зубов, а также разнообразные эстетические операции в пародонтологии.</p>
+                    </li>
+                    <li class="service-item">
+                        <h3 class="service-title">Имплантология</h3>
+                        <p class="service-description">Восстановлением целостности зубного ряда, возвращая ему функциональность и полноценный внешний вид. Под данным методом подразумевается зубная или дентальная имплантация.</p>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="team" id="team">
@@ -370,6 +423,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
 <script>
+    // проверка, загрузился ли gsap 
     try {
         gsap;
         let curtains = document.querySelector('.curtains');
@@ -384,9 +438,8 @@
             duration: 1.7,
             y: 1400
         });
-        console.log('gsap загружен ');
     } catch (e){
-        console.log('gsap не загрузился');
+        console.error('gsap не загрузился');
     }
     // let cards = document.querySelectorAll('.card');
     // cards.forEach((item, i)=>{

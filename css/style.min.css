@@ -52,11 +52,13 @@ a:focus {
 .container {
     margin: 0 auto;
     width: 75%;
+    max-width: 1100px;
 }
 
 .wide-container {
     margin: 0 auto;
     width: 90%;
+    max-width: 1300px;
 }
 
 
@@ -547,6 +549,56 @@ a:focus {
     fill: #5A98D0;
 }
 
+/* стили  для услуг*/
+.services {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.services .section-heading{
+    margin-top: 35px;
+}
+
+.service-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-gap: 18px 100px;
+    padding-left: 0;
+}
+
+.service-title {
+    position: relative;
+    margin: 18px auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    padding-left: 30px;
+    text-transform: uppercase;
+    color: #5A98D0;
+}
+
+.service-title:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 20px;
+    background: url('../img/arrow-right.svg') 100% 100% no-repeat;
+    background-size: contain;
+    padding: 0;
+    top: 5px;
+    left: 0px;
+    color: #5A98D0;
+}
+
+.service-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #533738;
+}
+
 /* Стили для команды */
 
 .team,
@@ -834,6 +886,7 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     align-items: center;
     padding-top: 37px;
     padding-bottom: 37px;
+    max-width: 900px;
 }
 
 .footer-contact {
@@ -928,7 +981,7 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     }
 
     .main-heading {    
-        font-size: 32px;
+        font-size: 28px;
         line-height: 50px;
     }
 
@@ -938,7 +991,19 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     }
 
     .section-heading {
-        font-size: 30px;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .about, .works, .team, .process-list {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .advantages{
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .team-list {
@@ -957,12 +1022,13 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
     .process-img {
         margin-bottom: 20px;
+        height: 130px;
     }
 
     .process-item span {
-        width: 55px;
-        height: 55px;
-        font-size: 24px;
+        width: 47px;
+        height: 47px;
+        font-size: 22px;
     }
 
     .reviews-slider {
@@ -970,11 +1036,35 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     }
 
     .advantages-item p {
-        font-size: 24px;
+        font-size: 14px;
+        line-height: normal;
     }
 
     .advantages-item span {
-        font-size: 40px;
+        font-size: 26px;
+        line-height: normal;
+    }
+
+    .services .section-heading {
+        margin-top: 0;
+    }
+
+    .service-list {
+        grid-template-columns: 100%;
+    }
+
+    .service-title {
+        font-size: 18px;
+    }
+
+    .service-title:before {
+        height: 14px;
+        top: 6px;
+    }
+    
+    .service-description {
+        font-size: 14px;
+        margin: 7px auto;
     }
 
     .footer-contact {
