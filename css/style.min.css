@@ -980,6 +980,10 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
         width: 85%;
     }
 
+    .mob-nav ul {
+        transform: translateX(-8%) skew(-16deg);
+    }
+
     .main-heading {    
         font-size: 28px;
         line-height: 50px;
@@ -1089,5 +1093,10 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 @media (max-width: 400px) { 
     .page-header .phone {
         display: none;
+    }
+
+    .mob-nav a {
+        font-size: 1em;
+        padding: 5px 0;
     }
 }
