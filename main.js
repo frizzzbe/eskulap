@@ -73,34 +73,34 @@ try {
   curtains.style.display = 'flex';
   
   gsap.to(".curtain-1", {
-    duration: 1.7,
+    duration: 2.2,
     y: -1400,
     onComplete: () => curtains.style.display = ''
   });
   gsap.to(".curtain-2", {
-    duration: 1.7,
+    duration: 2.2,
     y: 1400
   });
 
   gsap.from(".main-heading", {duration: 1.3, x: -300, opacity: 0, delay: 0.5});
   gsap.from(".promo-description", {duration: 1.3, x: -300, opacity: 0, delay: 0.7});
   gsap.from(".promo-button", {duration: 1.3, x: -300, opacity: 0, delay: 0.9});
-  gsap.from(".about", {duration: 1.2, y: 120, opacity: 0});
-  gsap.from(".works", {scrollTrigger: ".works", duration: 1.2, y: 120, opacity: 0});
-  gsap.from(".reviews", {scrollTrigger: ".reviews", duration: 1.2, y: 120, opacity: 0});
+  gsap.from(".about", {duration: 1.2, y: 100, opacity: 0});
+  gsap.from(".works", {scrollTrigger: ".works", duration: 1.2, y: 100, opacity: 0});
+  gsap.from(".reviews", {scrollTrigger: ".reviews", duration: 1.2, y: 100, opacity: 0});
   gsap.from(".form-wrap", {scrollTrigger: ".form-wrap", duration: 1.2, opacity: 0});
     
   let process = document.querySelectorAll('.process-item');
   let service = document.querySelectorAll('.service-item');
 
   process.forEach((item, i)=>{
-    gsap.from(process[i], {scrollTrigger: process[i], duration: 1, scale: .95, y: 100});
+    gsap.from(process[i], {scrollTrigger: process[i], duration: 1, scale: .95, y: 60});
   });
   service.forEach((item, i)=>{
     if (i%2){
-      gsap.from(service[i], {scrollTrigger: service[i], duration: 1, scale: .95, x: 100});
+      gsap.from(service[i], {scrollTrigger: service[i], duration: 1, scale: .95, x: 80});
     } else {
-      gsap.from(service[i], {scrollTrigger: service[i], duration: 1, scale: .95, x: -100});
+      gsap.from(service[i], {scrollTrigger: service[i], duration: 1, scale: .95, x: -80});
     }
   });
 } catch (e){

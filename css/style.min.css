@@ -773,7 +773,8 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
 .reviews-slide {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 1fr;
     grid-column-gap: 20px;
 }
 
@@ -927,6 +928,13 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     margin-top: 25px;
 }
 
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 0 !important;
+}
+
+.swiper-container {
+    padding-bottom: 30px !important;
+}
 
 @media (max-width: 1199px) {
     .process-list {
