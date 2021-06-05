@@ -73,12 +73,12 @@ try {
   curtains.style.display = 'flex';
   
   gsap.to(".curtain-1", {
-    duration: 2.2,
+    duration: 2.7,
     y: -1400,
     onComplete: () => curtains.style.display = ''
   });
   gsap.to(".curtain-2", {
-    duration: 2.2,
+    duration: 2.7,
     y: 1400
   });
 

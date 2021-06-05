@@ -811,6 +811,29 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     margin-bottom: 0;
 }
 
+.instagram-link {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-link a {
+    font-weight: bold;
+    padding-left: 35px;
+    color: #3D70B0;
+}
+.instagram-link a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    transform: translateX(-120%);
+    width: 30px;
+    height: 30px;
+    background: url('../img/inst.svg');
+}
+
 /* Стили для формы */
 
 .form {
