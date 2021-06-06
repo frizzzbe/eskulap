@@ -630,14 +630,15 @@ a:focus {
 
 .team-item {
     margin-bottom: 20px;
-    width: 31%;
+    width: 45%;
     min-width: 240px;
 }
 
 .team-img {
     display: block;
+    margin: 0 auto;
     margin-bottom: 10px;
-    width: 100%;
+    width: 60%;
 }
 
 .team-text {
