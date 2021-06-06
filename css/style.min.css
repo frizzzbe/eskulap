@@ -812,6 +812,22 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     margin-bottom: 0;
 }
 
+.advantages-link {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantages-link a {
+    font-weight: bold;
+    padding-left: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .instagram-link {
     margin-top: 20px;
     position: relative;

@@ -9,7 +9,7 @@
   $name = trim($name);
   $phone = trim($phone);
   
-  if(mail("frizzzbe@yandex.ru", "Заявка на консультацию", "Имя клиента: ".$name.". \nТелефон клиента: ".$phone,"From: sender@reg.ru \r\n")) {
+  if(mail("eskulap-kmv@mail.ru", "Заявка на консультацию", "Имя клиента: ".$name.". \nТелефон клиента: ".$phone,"From: sender@reg.ru \r\n")) {
     header('Location: index.html');
   }
 ?>
