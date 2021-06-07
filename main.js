@@ -13,6 +13,22 @@ const swiper = new Swiper('.swiper-container', {
   }
 });
 
+// слайдер 2
+// const swiper2 = new Swiper('.swiper2', {
+//   direction: 'horizontal',
+//   loop: true,
+//   // pagination: {
+//   //   el: '.swiper-pagination',
+//   // },
+//   slidesPerView: '2',
+//   spaceBetween: '15',
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.license-button-next',
+//     prevEl: '.license-button-prev',
+//   }
+// });
+
 const burger = document.querySelector('#burger'),
   nav = document.querySelector('#mob-nav'),
   navLinks = document.querySelectorAll('.mob-nav-link'),
@@ -86,7 +102,7 @@ try {
   gsap.from(".promo-description", {duration: 1.3, x: -300, opacity: 0, delay: 0.7});
   gsap.from(".promo-button", {duration: 1.3, x: -300, opacity: 0, delay: 0.9});
   gsap.from(".about", {duration: 1.2, y: 100, opacity: 0});
-  gsap.from(".works", {scrollTrigger: ".works", duration: 1.2, y: 100, opacity: 0});
+  gsap.from(".hotel", {scrollTrigger: ".hotel", duration: 1.2, y: 100, opacity: 0});
   gsap.from(".reviews", {scrollTrigger: ".reviews", duration: 1.2, y: 100, opacity: 0});
   gsap.from(".form-wrap", {scrollTrigger: ".form-wrap", duration: 1.2, opacity: 0});
     

@@ -117,6 +117,10 @@ a:focus {
     line-height: 50px;
 }
 
+.section-heading {
+    text-align: left;
+}
+
 /* Стили для шапки */
 
 .page-header {
@@ -384,6 +388,10 @@ a:focus {
     line-height: 62px;
 }
 
+.secondary-main {
+    padding-top: 140px;
+}
+
 .promo-description {
     margin-top: 0;
     margin-bottom: 21px;
@@ -458,47 +466,47 @@ a:focus {
 
 /* Стили для работ */
 
-.works {
+.hotel {
     padding-top: 65px;
     padding-bottom: 65px;
 }
 
-.works .section-heading {
+.hotel .section-heading {
     text-align: left;
 }
 
-.works-grid {
+.hotel-grid {
     display: grid;
     grid-template-columns: 5fr 2fr 5fr;
     grid-column-gap: 20px;
     grid-row-gap: 30px;
 }
 
-.works-item {
+.hotel-item {
     overflow: hidden;
     position: relative;
 }
 
-.works-item:nth-child(4n + 2) {
+.hotel-item:nth-child(4n + 2) {
     grid-column: 2 / -1;
 }
 
-.works-item:nth-child(4n + 3) {
+.hotel-item:nth-child(4n + 3) {
     grid-column: 1 / 3;
 }
 
-.works-item:nth-child(4n + 4) {
+.hotel-item:nth-child(4n + 4) {
     grid-column: 3 / -1;
 }
 
-.works-img {
+.hotel-img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.works-hover {
+.hotel-hover {
     position: absolute;
     top: 0;
     left: 100%;
@@ -514,11 +522,11 @@ a:focus {
     z-index: 2;
 }
 
-.works-item:hover .works-hover {
+.hotel-item:hover .hotel-hover {
     left: 0;
 }
 
-.works-heading {
+.hotel-heading {
     margin: 0 auto;
     margin-top: 0;
     margin-bottom: 15px;
@@ -529,7 +537,7 @@ a:focus {
     line-height: 37px;
 }
 
-.works-text {
+.hotel-text {
     display: -webkit-box;
     overflow-y: hidden;
 
@@ -607,8 +615,7 @@ a:focus {
 
 /* Стили для команды */
 
-.team,
-.process-list {
+.team {
     padding-top: 50px;
     padding-bottom: 60px;
 }
@@ -719,7 +726,8 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
 /* Стили для отзывов */
 
-.reviews {
+.reviews,
+.license {
     padding-bottom: 65px;
 }
 
@@ -728,6 +736,10 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     padding-right: 100px;
     padding-left: 100px;
 }
+
+/* .license-slide img {
+    height: 500px;
+} */
 
 .reviews-pagination {
     position: absolute;
@@ -739,7 +751,8 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     transform: translateY(-50%);
 }
 
-.reviews-button {
+.reviews-button,
+.license-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -752,23 +765,28 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     background-color: #5A98D0;
 }
 
-.reviews-button:hover {
+.reviews-button:hover,
+.license-button:hover {
     background-color: white;
     box-shadow: 0 0 5px #5A98D0, 
                 inset 0 0 2px #5A98D0;
 }
 
 .reviews-button:hover path,
-.reviews-button:focus path {
+.reviews-button:focus path,
+.license-button:hover path,
+.license-button:focus path {
     fill: #5A98D0;
 }
 
-.reviews-button:focus {
+.reviews-button:focus,
+.license-button:focus {
     border: 2px solid #5A98D0;
     background-color: white;
 }
 
-.reviews-button-prev svg {
+.reviews-button-prev svg,
+.license-button-prev svg {
     transform: rotate(180deg);
 }
 
@@ -777,6 +795,19 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     /* grid-template-columns: 1fr 1fr; */
     grid-template-columns: 1fr;
     grid-column-gap: 20px;
+}
+
+.license-slides {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.license-slide {
+    width: 37%;
+    min-width: 300px;
 }
 
 .reviews-text {
@@ -799,16 +830,19 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     text-transform: uppercase;
 }
 
-.reviews-images {
+.reviews-images,
+.license-images {
     padding: 0 5px;
 }
 
-.reviews-images img {
+.reviews-images img,
+.license-images img {
     display: block;
     margin-bottom: 24px;
 }
 
-.reviews-images img:last-child {
+.reviews-images img:last-child,
+.license-images img:last-child {
     margin-bottom: 0;
 }
 
@@ -822,7 +856,7 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
 .advantages-link a {
     font-weight: bold;
-    padding-left: 35px;
+    /* padding-left: 35px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -976,6 +1010,32 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     padding-bottom: 30px !important;
 }
 
+.authorities {
+    margin-bottom: 65px;
+}
+
+.authorities-items {
+    display: flex;
+    gap: 35px 85px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+}
+
+.authorities-item {
+    flex-basis: 42%;
+    flex-grow: 0.8;
+    min-width: 320px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.authorities-contacts {
+    list-style: none;
+    padding: 0;
+}
+
 @media (max-width: 1199px) {
     .process-list {
         justify-content: space-evenly;
@@ -1003,18 +1063,21 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
         display: block;
     }
 
-    .reviews-slide {
+    .reviews-slide,
+    .license-slide {
         grid-template-columns: 1fr;
     }
 
-    .reviews-images {
+    .reviews-images,
+    .license-images {
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
         margin-top: 20px;
     }
 
-    .reviews-images img {
+    .reviews-images img,
+    .license-images img {
         display: block;
         max-width: 100%;
         min-width: 250px;
@@ -1051,9 +1114,10 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     .section-heading {
         font-size: 24px;
         margin-bottom: 15px;
+        line-height: 32px;
     }
 
-    .about, .works, .team, .process-list {
+    .about, .hotel, .team, .process-list {
         padding-top: 20px;
         padding-bottom: 20px;
         margin-top: 0;
@@ -1074,7 +1138,7 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     }
     
     .reviews-pagination,
-    .works-hover {
+    .hotel-hover {
         display: none;
     }
 
@@ -1125,6 +1189,11 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
         margin: 7px auto;
     }
 
+    .team-item ul {
+        padding-left: 15px;
+        font-size: 14px;    
+    }
+
     .footer-contact {
         margin-left: 0;
         justify-content: space-between;
@@ -1152,5 +1221,22 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
     .mob-nav a {
         font-size: 1em;
         padding: 5px 0;
+    }
+
+    .authorities-title {
+        font-size: 14px;
+    }
+
+    .authorities-contacts li {
+        font-size: 12px;
+    }
+
+    .authorities-items {
+        display: flex;
+        gap: 5px 50px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
     }
 }
