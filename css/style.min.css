@@ -1093,6 +1093,10 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
         line-height: 26px;
     }
 
+    .curtains{
+        display: none !important;
+    }
+
     .container {
         width: 85%;
     }
@@ -1189,6 +1193,10 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
         margin: 7px auto;
     }
 
+    .team-item {
+        width: 80%;
+    }
+
     .team-item ul {
         padding-left: 15px;
         font-size: 14px;    
@@ -1210,6 +1218,10 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 
     .page-footer .phone {
         font-size: 16px;
+    }
+
+    .find-map {
+        height: 300px;
     }
 }
 
@@ -1238,5 +1250,9 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
         justify-content: space-evenly;
         list-style: none;
         padding: 0;
+    }
+
+    .team-item {
+        width: 90%;
     }
 }
