@@ -1226,8 +1226,15 @@ https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_c
 }
 
 @media (max-width: 400px) { 
+    .logo {
+        margin-right: 10px;
+    }
+
     .page-header .phone {
-        display: none;
+        /* display: none; */
+        margin-right: 8px;
+        font-size: 11px;
+        line-height: 1.5em;
     }
 
     .mob-nav a {
