@@ -274,6 +274,9 @@ a:focus {
 .mob-nav li:nth-child(6) a {
 	transition: all 275ms 425ms
 }
+.mob-nav li:nth-child(7) a {
+	transition: all 275ms 475ms
+}
 
 
 /* Decoration */

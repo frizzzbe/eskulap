@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <title>ЭСКУЛАП Клиника и Стоматология в г. Пятигорск.</title>
+  <meta name="description" content="Клиника ЭСКУЛАП г. Пятигорск. Современные методы лечения и качественное обслуживание с индивидуальным подходом к каждому человеку." />
+  <meta name="keywords" content="eskulap, эскулап, отсеопатия, пятигорск, медицина, клиника, клиника пятигорск, лечение, стоматология, отель" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="./css/style.min.css" type="text/css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text/css" />
+</head>
+
+<body>
+    <header class="page-header">
+      <div class="wide-container">
+        <a href="./index.html" class="logo">
+          <img src="img/logo.png" alt="Логотип компании ESKULAP" width="25" height="25">
+          ESKULAP
+        </a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="./index.html#about" class="nav-link">О нас</a></li>
+            <li class="nav-item"><a href="./index.html#team" class="nav-link">Персонал</a></li>
+            <li class="nav-item"><a href="./index.html#hotel" class="nav-link">Наш отель</a></li>
+            <li class="nav-item"><a href="./index.html#services" class="nav-link">Услуги</a></li>
+            <li class="nav-item"><a href="./legal-info.html" class="nav-link">Документы</a></li>
+            <li class="nav-item"><a href="./price-list.html" class="nav-link">Прейскурант</a></li>
+            <li class="nav-item"><a href="#form" class="nav-link">Записаться</a></li>
+          </ul>
+        </nav>
+        <a href="tel:+79054994438" class="phone">+7 (905) 499-44-38</a>
+        <button id="burger" class="open-mob-nav" aria-label="burger-menu">
+          <span class="burger"></span>
+        </button>
+      </div>
+    </header>
+
+	<div class="">
+		<div class="mob-nav" id="mob-nav">
+			<ul>
+				<li>
+					<a class="mob-nav-link" href="./index.html#about">О нас</a>
+				</li>
+				<li>
+					<a class="mob-nav-link" href="./index.html#team">Персонал</a>
+				</li>
+				<li>
+					<a class="mob-nav-link" href="./index.html#hotel">Наш отель</a>
+				</li>
+				<li>
+					<a class="mob-nav-link" href="./index.html#services">Услуги</a>
+				</li>
+				<li>
+					<a class="mob-nav-link" href="./legal-info.html">Документы</a>
+				</li>
+				<li>
+					<a class="mob-nav-link" href="./price-list.html">Прейскурант</a>
+				</li>
+				<li>
+					<a class="mob-nav-link" href="#form">Записаться</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+  <main class="secondary-main">
+    <section class="license" id="license">
+      <!-- <embed src="./Прейсурант-ООО-Эскулап.pdf" width="100%" height="1000px" /> not working for mobile-->
+      <div style="width:100%;">
+          <div>
+              <iframe id="pdf-js-viewer" src="./assets/web/viewer.html?file=%2FПрейсурант-ООО-Эскулап.pdf" title="webviewer" frameborder="0" width="100%" height="1000"></iframe>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="wide-container">
+      <div class="footer-contact">
+        <p class="adress">Медицинский центр: ул. Бунимовича, 78</p>  
+        <a href="tel:+79054994438" class="phone">+7 (905) 499-44-38</a>
+      </div>
+      <div class="footer-contact">
+        <p class="adress">Стоматология: ул. Малыгина, 34А</p>
+        <a href="tel:+78793390050" class="phone">+7 (8793) 39-00-50</a>
+      </div>
+      <p class="copyright">© 2023 г. Пятигорск, семейная клиника.  ООО “ЭСКУЛАП”</p>
+    </div>
+  </footer>
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+<script src="./main.js" defer></script>
+</html>
